@@ -2,7 +2,8 @@ import mongoose from 'mongoose'
 import dns from 'dns'
 
 // had to add this because mongodb srv wasnt resolving on my windows machine
-// stackoverflow said to set google dns so trying that
+// stackoverflow said to set google dns so trying that 
+// dns does not allow to access cluster 
 dns.setServers(['8.8.8.8', '8.8.4.4'])
 
 const connectDB = async () => {
