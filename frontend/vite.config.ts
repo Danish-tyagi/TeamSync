@@ -13,14 +13,14 @@ export default defineConfig({
     include: ['date-fns', 'lucide-react'],
   },
  server: {
-    port: 5173,
+    port: 8080,
     allowedHosts: [
       'teamsync-production-491a.up.railway.app',
       'teamsync-frontend-production-7c77.up.railway.app'
     ],
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'http://localhost:8080',
         changeOrigin: true,
       },
     },
