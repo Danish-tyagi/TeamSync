@@ -12,8 +12,12 @@ export default defineConfig({
   optimizeDeps: {
     include: ['date-fns', 'lucide-react'],
   },
-  server: {
+ server: {
     port: 5173,
+    allowedHosts: [
+      'teamsync-production-491a.up.railway.app',
+      'teamsync-frontend-production-7c77.up.railway.app'
+    ],
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
