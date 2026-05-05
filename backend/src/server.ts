@@ -17,7 +17,7 @@ const httpServer = http.createServer(app)
 
 const io = new SocketIOServer(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL || 'http://localhost:5173',
+    origin: process.env.CLIENT_URL || 'https://teamsync-frontend-production-7c77.up.railway.app',
     methods: ['GET', 'POST'],
   },
 })
@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
 })
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:5173',
+  origin: process.env.CLIENT_URL || 'https://teamsync-frontend-production-7c77.up.railway.app',
   credentials: true,
 }))
 
