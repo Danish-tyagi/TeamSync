@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://teamsync-production-491a.up.railway.app',
+  baseURL: 'https://teamsync-production-491a.up.railway.app/api',
   headers: {
     'Content-Type': 'application/json',
   },
